@@ -10,14 +10,14 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent"
-        Title="MainWindow" Height="600" Width="450">
-    <Border CornerRadius="10"  Background="#191d32"
-            BorderThickness="2" BorderBrush="#282f44">
+        Title="MainWindow" Height="580" Width="400">
+    <Border CornerRadius="10"  Background="#0b132b"
+            BorderThickness="2" BorderBrush="#1c2541">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="400"/>
             </Grid.RowDefinitions>
             
             <!--Icon, minimize and close buttons part-->
@@ -44,6 +44,73 @@
                                Style="{DynamicResource minimize}"/>
                         <Button x:Name="btnClose" Click="btnClose_Click"
                                Style="{DynamicResource close}"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            
+            <!--Solution part-->
+            <Border Grid.Row="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="1" Style="{DynamicResource lblAction}" Content="165+4874"/>
+                    <Label Grid.Row="2" Style="{DynamicResource lblActionANDResult}" Content="5,039"/>
+                </Grid>
+            </Border>
+            
+            <!--Buttons Main part-->
+            <Border Grid.Row="2" Background="#001824" CornerRadius="0 0 10 10">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="15" ShadowDepth="7" Direction="120" Color="Black" Opacity="0.5"/>
+                </Border.Effect>
+                <Grid> 
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="2" HorizontalAlignment="Center">
+                        <Button Style="{DynamicResource btnNumber}" FontSize="30" Content="C" Foreground="Green"/>
+                        <Button Style="{DynamicResource btnNumber}" FontSize="30" Content="Del" Foreground="Green"/>
+                        <Button Style="{DynamicResource btnNumber}" FontSize="30" Content="%" Foreground="Green"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="÷" Foreground="Green"/>
+                    </StackPanel>
+                    
+                    
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="2" HorizontalAlignment="Center">
+                        <Button Style="{DynamicResource btnNumber}" Content="7" Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="8" Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="9" Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="×" Foreground="Green"/>
+                    </StackPanel>
+                    
+                    
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="2" HorizontalAlignment="Center">
+                        <Button Style="{DynamicResource btnNumber}" Content="4" Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="5" Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="6" Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="ー" Foreground="Green"/>
+                    </StackPanel>
+                    
+                    
+                    <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="2" HorizontalAlignment="Center">
+                        <Button Style="{DynamicResource btnNumber}" Content="1" Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="2" Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="3" Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="+" Foreground="Green"/>
+                    </StackPanel>
+                    
+                    
+                    <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="2" HorizontalAlignment="Center">
+                        <Button Style="{DynamicResource btnNumber}" Content="±" Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="0" Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="." Foreground="White"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="=" Foreground="Green"/>
                     </StackPanel>
                 </Grid>
             </Border>

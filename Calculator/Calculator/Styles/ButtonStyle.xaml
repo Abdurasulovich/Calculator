@@ -11,7 +11,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="B"
-                            Background="#1F2936"
+                            Background="#282f44"
                             CornerRadius="5">
                         <Path Fill="#768C9E" Data="{DynamicResource Minimize}" Height="6" Width="15" Stretch="Uniform" />
                     </Border>
@@ -30,7 +30,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
     <Style x:Key="close" TargetType="{x:Type Button}">
         <Setter Property="Height" Value="30"/>
         <Setter Property="Width" Value="30"/>
@@ -41,7 +41,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="B"
-                            Background="#1F2936"
+                            Background="#282f44"
                             CornerRadius="5">
                         <Path Fill="#768C9E" 
                               Data="{DynamicResource Close}" Height="10" Width="10" Stretch="Uniform"/>
@@ -61,6 +61,36 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style x:Key="btnNumber" TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="75"/>
+        <Setter Property="Width" Value="90"/>
+        <Setter Property="FontSize" Value="40"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="2 0"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="B" CornerRadius="5" Background="#001824">
+                        <Label Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}"
+                               FontSize="{TemplateBinding FontSize}" FontFamily="cursive"
+                               VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="#1c2541"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="B" Property="Background" Value="#001b29"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+                
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 
 
 </ResourceDictionary>
