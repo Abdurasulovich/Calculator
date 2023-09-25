@@ -56,15 +56,15 @@
                         <RowDefinition Height="40"/>
                         <RowDefinition Height="60"/>
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="1" Style="{DynamicResource lblAction}" Content="165+4874"/>
-                    <Label Grid.Row="2" Style="{DynamicResource lblActionANDResult}" Content="5,039"/>
+                    <Label x:Name="lblNumbers" Grid.Row="1" Style="{DynamicResource lblAction}" Content="165+4874"/>
+                    <Label x:Name="lblResult" Grid.Row="2" Style="{DynamicResource lblActionANDResult}" Content="5,039"/>
                 </Grid>
             </Border>
             
             <!--Buttons Main part-->
             <Border Grid.Row="2" Background="#001824" CornerRadius="0 0 10 10">
                 <Border.Effect>
-                    <DropShadowEffect BlurRadius="15" ShadowDepth="7" Direction="120" Color="Black" Opacity="0.5"/>
+                    <DropShadowEffect BlurRadius="15" ShadowDepth="7" Direction="80" Color="Black" Opacity="0.5"/>
                 </Border.Effect>
                 <Grid> 
                     <Grid.RowDefinitions>
@@ -75,42 +75,42 @@
                         <RowDefinition Height="80"/>
                     </Grid.RowDefinitions>
                     <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="2" HorizontalAlignment="Center">
-                        <Button Style="{DynamicResource btnNumber}" FontSize="30" Content="C" Foreground="Green"/>
-                        <Button Style="{DynamicResource btnNumber}" FontSize="30" Content="Del" Foreground="Green"/>
-                        <Button Style="{DynamicResource btnNumber}" FontSize="30" Content="%" Foreground="Green"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="÷" Foreground="Green"/>
+                        <Button Style="{DynamicResource btnNumber}" FontSize="30" Content="C" Foreground="Green" x:Name="btnClear" Click="btnClear_Click" />
+                        <Button Style="{DynamicResource btnNumber}" FontSize="30" Content="Del" Foreground="Green" x:Name="btnRemove" Click="btnRemove_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" FontSize="30" Content="%" Foreground="Green" x:Name="btnPercent" Click="btnPercent_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="÷" Foreground="Green" x:Name="btnDivide" Click="btnDivide_Click"/>
                     </StackPanel>
                     
                     
                     <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="2" HorizontalAlignment="Center">
-                        <Button Style="{DynamicResource btnNumber}" Content="7" Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="8" Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="9" Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="×" Foreground="Green"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="7" Foreground="White" x:Name="btnSeven" Click="btnSeven_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="8" Foreground="White" x:Name="btnEight" Click="btnEight_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="9" Foreground="White" x:Name="btnNine" Click="btnNine_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="×" Foreground="Green" x:Name="btnMultiple" Click="btnMultiple_Click"/>
                     </StackPanel>
                     
                     
                     <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="2" HorizontalAlignment="Center">
-                        <Button Style="{DynamicResource btnNumber}" Content="4" Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="5" Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="6" Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="ー" Foreground="Green"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="4" Foreground="White" x:Name="btnFour" Click="btnFour_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="5" Foreground="White" x:Name="btnFive" Click="btnFive_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="6" Foreground="White" x:Name="btnSix" Click="btnSix_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="ー" Foreground="Green" x:Name="btnMinus" Click="btnMinus_Click"/>
                     </StackPanel>
                     
                     
                     <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="2" HorizontalAlignment="Center">
-                        <Button Style="{DynamicResource btnNumber}" Content="1" Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="2" Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="3" Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="+" Foreground="Green"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="1" Foreground="White" x:Name="btnOne" Click="btnOne_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="2" Foreground="White" x:Name="btnTwo" Click="btnTwo_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="3" Foreground="White" x:Name="btnThree" Click="btnThree_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="+" Foreground="Green" x:Name="btnPlus" Click="btnPlus_Click"/>
                     </StackPanel>
                     
                     
                     <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="2" HorizontalAlignment="Center">
-                        <Button Style="{DynamicResource btnNumber}" Content="±" Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="0" Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="." Foreground="White"/>
-                        <Button Style="{DynamicResource btnNumber}" Content="=" Foreground="Green"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="±" Foreground="White" x:Name="btnPlusMinus" Click="btnPlusMinus_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="0" Foreground="White" x:Name="btnZero" Click="btnZero_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="." Foreground="White" x:Name="btnDot" Click="btnDot_Click"/>
+                        <Button Style="{DynamicResource btnNumber}" Content="=" Foreground="Green" x:Name="btnEqual" Click="btnEqual_Click"/>
                     </StackPanel>
                 </Grid>
             </Border>
